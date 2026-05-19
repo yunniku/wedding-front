@@ -369,8 +369,6 @@ export default function DashboardPage() {
                 <h3>{w.groomName} <span style={{ color: '#c9a84c', fontStyle: 'italic' }}>♥</span> {w.brideName}</h3>
                 <p>📅 {w.weddingDate} &nbsp;|&nbsp; 📍 {w.venue}</p>
                 <p>🎨 {w.theme === 'modern' ? 'Modern' : w.theme === 'romantic' ? 'Romantic' : 'Classic'}</p>
-                <span className="share-code">🔗 {w.shareCode}</span>
-                <span className="share-code">🔗 {w.shareCode}</span>
                 <button onClick={() => {
                     const url = `https://wedding-front-j18dwh6if-yunnikus-projects.vercel.app/w/${w.shareCode}`
                     navigator.clipboard.writeText(url)
