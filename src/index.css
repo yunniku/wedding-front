@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --cream: #faf6f0;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --gold-dark: #a07830;
+  --dark: #2c2416;
+  --text: #4a3f2f;
+  --text-light: #8a7a65;
+  --white: #ffffff;
+  --border: #e8d5a3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+}
+
+/* 테마별 변수 */
+.theme-classic {
+  --primary: #c9a84c;
+  --primary-dark: #a07830;
+  --bg: #faf6f0;
+  --card-bg: #ffffff;
+  --text-main: #4a3f2f;
+  --text-sub: #8a7a65;
+  --border: #e8d5a3;
+  --accent: #c9a84c;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.theme-modern {
+  --primary: #1a1a1a;
+  --primary-dark: #000000;
+  --bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --text-main: #1a1a1a;
+  --text-sub: #888888;
+  --border: #e0e0e0;
+  --accent: #1a1a1a;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.theme-romantic {
+  --primary: #d4849a;
+  --primary-dark: #b5637a;
+  --bg: #fff5f7;
+  --card-bg: #ffffff;
+  --text-main: #5c3040;
+  --text-sub: #b5637a;
+  --border: #f5c6d0;
+  --accent: #d4849a;
+  font-family: 'Playfair Display', serif;
+}
+
+/* 공통 버튼 */
+button {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 2px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.3s;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--gold);
+}
+
+/* 로그인/회원가입 페이지 */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #faf6f0 0%, #f0e8d8 100%);
+}
+
+.auth-box {
+  background: #fff;
+  padding: 56px 48px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.auth-logo h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.auth-logo p {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+.auth-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+
+.auth-btn:hover { background: var(--gold-dark); }
+
+.auth-btn-outline {
+  width: 100%;
+  padding: 13px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.auth-btn-outline:hover { background: var(--gold); color: #fff; }
+
+.auth-link {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
+/* 대시보드 */
+.dashboard {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dashboard-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.dashboard-header span {
+  font-size: 12px;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+}
+
+.create-form {
+  background: #fff;
+  padding: 40px;
+  margin-bottom: 48px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.create-form h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin-bottom: 28px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* 테마 선택 */
+.theme-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.theme-option {
+  border: 2px solid #e0e0e0;
+  padding: 16px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.theme-option:hover { border-color: var(--gold); }
+.theme-option.selected { border-color: var(--gold); background: #fffbf4; }
+
+.theme-option .theme-preview {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+}
+
+.preview-classic { background: linear-gradient(135deg, #c9a84c, #e8d5a3); }
+.preview-modern { background: linear-gradient(135deg, #1a1a1a, #888); }
+.preview-romantic { background: linear-gradient(135deg, #d4849a, #f5c6d0); }
+
+.theme-option span {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* 청첩장 카드 */
+.wedding-list h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.wedding-card {
+  background: #fff;
+  padding: 28px 32px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+
+.wedding-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+
+.wedding-card-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.wedding-card-info p {
+  font-size: 12px;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.wedding-card-info .share-code {
+  display: inline-block;
+  background: #faf6f0;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  font-size: 11px;
+  color: var(--gold-dark);
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+}
+
+.wedding-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-view {
+  padding: 10px 20px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+.btn-view:hover { background: var(--gold-dark); }
+
+.btn-del {
+  padding: 10px 16px;
+  background: transparent;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.btn-del:hover { background: #c0392b; color: #fff; }
+
+.create-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-top: 8px;
+}
+
+.create-btn:hover { background: var(--gold-dark); }
+
+/* 청첩장 공유 페이지 */
+.wedding-page {
+  min-height: 100vh;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wedding-page.theme-classic { background: #faf6f0; }
+.wedding-page.theme-modern { background: #f5f5f5; }
+.wedding-page.theme-romantic { background: #fff5f7; }
+
+.wedding-hero {
+  text-align: center;
+  max-width: 560px;
+  width: 100%;
+  padding: 60px 40px;
+  background: #fff;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.wedding-hero::before {
+  content: '';
+  position: absolute;
+  top: 12px; left: 12px; right: 12px; bottom: 12px;
+  border: 1px solid var(--accent, #c9a84c);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.wedding-hero .couple-names {
+  font-size: 42px;
+  letter-spacing: 0.05em;
+  margin: 20px 0;
+  color: var(--text-main, #4a3f2f);
+}
+
+.wedding-hero .ampersand {
+  color: var(--accent, #c9a84c);
+  font-style: italic;
+  margin: 0 12px;
+}
+
+.wedding-hero .wedding-date {
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-sub, #8a7a65);
+  margin-bottom: 8px;
+}
+
+.wedding-hero .wedding-venue {
+  font-size: 13px;
+  color: var(--text-sub, #8a7a65);
+  letter-spacing: 0.1em;
+}
+
+.wedding-hero .wedding-message {
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-main, #4a3f2f);
+  margin-top: 24px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.wedding-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+  color: var(--accent, #c9a84c);
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  width: 100%;
+  max-width: 560px;
+}
+
+.wedding-divider::before,
+.wedding-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--accent, #c9a84c);
+  opacity: 0.3;
+}
+
+/* 방명록 */
+.guestbook {
+  width: 100%;
+  max-width: 560px;
+}
+
+.guestbook h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--text-main, #4a3f2f);
+  letter-spacing: 0.05em;
+}
+
+.guestbook-form {
+  background: #fff;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+
+.guestbook-item {
+  background: #fff;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border-left: 3px solid var(--accent, #c9a84c);
+}
+
+.guestbook-item .guest-name {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--text-main, #4a3f2f);
+  margin-bottom: 6px;
+}
+
+.guestbook-item .guest-message {
+  font-size: 13px;
+  color: var(--text-sub, #8a7a65);
+  line-height: 1.7;
+}
+
+.guestbook-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent, #c9a84c);
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+}
+
+.guestbook-btn:hover { opacity: 0.85; }
+
+.empty-state {
+  text-align: center;
+  padding: 48px;
+  color: var(--text-light);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
