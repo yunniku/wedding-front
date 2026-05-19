@@ -370,7 +370,7 @@ export default function DashboardPage() {
                 <p>📅 {w.weddingDate} &nbsp;|&nbsp; 📍 {w.venue}</p>
                 <p>🎨 {w.theme === 'modern' ? 'Modern' : w.theme === 'romantic' ? 'Romantic' : 'Classic'}</p>
                 <button onClick={() => {
-                    const url = `https://wedding-front-j18dwh6if-yunnikus-projects.vercel.app/w/${w.shareCode}`
+                    const url = `https://wedding-front-livid.vercel.app/w/${w.shareCode}`
                     navigator.clipboard.writeText(url)
                     alert('공유 링크가 복사됐어요! 하객들에게 보내주세요 💌')
                     }} style={{
