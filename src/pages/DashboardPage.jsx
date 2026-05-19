@@ -370,6 +370,19 @@ export default function DashboardPage() {
                 <p>📅 {w.weddingDate} &nbsp;|&nbsp; 📍 {w.venue}</p>
                 <p>🎨 {w.theme === 'modern' ? 'Modern' : w.theme === 'romantic' ? 'Romantic' : 'Classic'}</p>
                 <span className="share-code">🔗 {w.shareCode}</span>
+                <span className="share-code">🔗 {w.shareCode}</span>
+                <button onClick={() => {
+                    const url = `https://wedding-front-j18dwh6if-yunnikus-projects.vercel.app/w/${w.shareCode}`
+                    navigator.clipboard.writeText(url)
+                    alert('공유 링크가 복사됐어요! 하객들에게 보내주세요 💌')
+                    }} style={{
+                    marginTop: 6, padding: '6px 14px', fontSize: 11,
+                    background: 'transparent', border: '1px solid #c9a84c',
+                    color: '#c9a84c', cursor: 'pointer', letterSpacing: '0.1em',
+                    display: 'block',
+                }}>
+                    🔗 공유 링크 복사
+                </button>
               </div>
               <div className="wedding-card-actions">
                 <button className="btn-view" onClick={() => navigate(`/w/${w.shareCode}`)}>보기</button>
