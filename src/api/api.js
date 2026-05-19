@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://wedding-backend-ips9.onrender.com/api',
+    baseURL: import.meta.env.VITE_API_URL,
 });
 
 // 회원 API
